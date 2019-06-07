@@ -3,6 +3,7 @@ package com.fb.jjyyzjy.lib.focus;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
@@ -38,6 +39,13 @@ public class FocusScaleUtils {
         init();
     }
 
+    public FocusScaleUtils(float scale) {
+        this.scale = scale;
+        this.interpolatorLarge = new AccelerateInterpolator(1.5f);
+        this.interpolatorSmall = new DecelerateInterpolator(1.5f);
+        init();
+    }
+
     public FocusScaleUtils(int duration, float scale, Interpolator interpolator) {
         this(duration, duration, scale, interpolator, interpolator);
     }
@@ -60,9 +68,11 @@ public class FocusScaleUtils {
      * @param item
      */
     public void scaleToLarge(View item) {
+        Log.i("zhangjy","scaleToLarge");
         if (!item.isFocused()) {
             return;
         }
+        Log.i("zhangjy","scaleToLarge2");
         scaleToLargeNotFocus(item);
     }
 
@@ -140,5 +150,9 @@ public class FocusScaleUtils {
      */
     public void scaleToNormal() {
         scaleToNormal(oldView);
+    }
+
+    public float getScale() {
+        return scale;
     }
 }
