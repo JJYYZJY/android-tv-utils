@@ -11,7 +11,6 @@
     focusUtils.startMoveFocus(newFocus);
 ```
 
-、、、
 * view缩放
 * 圆角view
 ##### *可安装项目中的demo.apk体验*

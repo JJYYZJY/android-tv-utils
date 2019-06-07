@@ -48,7 +48,6 @@ public class BringToFrontRelative extends RelativeLayout {
 
     @Override
     public void bringChildToFront(View child) {
-//        super.bringChildToFront(child);
         bringToFrontHelper.bringChildToFront(this,child);
     }
 

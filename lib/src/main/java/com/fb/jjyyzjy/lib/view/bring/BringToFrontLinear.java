@@ -37,7 +37,6 @@ public class BringToFrontLinear extends LinearLayout{
     private BringToFrontHelper bringToFrontHelper;
 
     private void mInit() {
-        Log.i("zhangjy","init");
         setWillNotDraw(true);
         setChildrenDrawingOrderEnabled(true);
         bringToFrontHelper = new BringToFrontHelper();
@@ -45,14 +44,11 @@ public class BringToFrontLinear extends LinearLayout{
 
     @Override
     protected int getChildDrawingOrder(int childCount, int i) {
-        Log.i("zhangjy","getChildDrawingOrder"+i);
         return bringToFrontHelper.getChildDrawingOrder(childCount,i);
     }
 
     @Override
     public void bringChildToFront(View child) {
-        Log.i("zhangjy","bringChildToFront");
-//        super.bringChildToFront(child);
         bringToFrontHelper.bringChildToFront(this,child);
     }
 }

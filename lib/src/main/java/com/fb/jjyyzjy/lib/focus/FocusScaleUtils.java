@@ -68,11 +68,9 @@ public class FocusScaleUtils {
      * @param item
      */
     public void scaleToLarge(View item) {
-        Log.i("zhangjy","scaleToLarge");
         if (!item.isFocused()) {
             return;
         }
-        Log.i("zhangjy","scaleToLarge2");
         scaleToLargeNotFocus(item);
     }
 
