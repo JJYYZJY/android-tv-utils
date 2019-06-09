@@ -15,4 +15,5 @@
 * 圆角view
 ##### *可安装项目中的demo.apk体验*
 
+![focus_demo.gif](focus_demo.gif)
 ![demo.jpg](demo.jpg)
